@@ -1,0 +1,3 @@
+ifeq ($(CONFIG_INTERPRETERS_SCHEME),y)
+CONFIGURED_APPS += interpreters/ao-scheme
+endif

@@ -1,0 +1,18 @@
+To use ao-scheme with NuttX, first you need to install the ao-scheme
+package. That package provides all of the scheme interpreter source
+code that can then be compiled for the NuttX system.
+
+	$ git clone git://keithp.com/git/ao-scheme
+	$ cd ao-scheme
+	$ ./autogen.sh
+	$ make install
+
+This follows the R7RS with the following known exceptions:
+
+* No bytevectors
+* Characters are just numbers
+* No dynamic-wind or exceptions
+* No environments
+* No syntax-rules; (it does have classic macros)
+* No record types
+* No libraries
