@@ -1,0 +1,13 @@
+To use snek with NuttX, first you need to install the snek
+package. That package provides all of the interpreter source
+code that can then be compiled for the NuttX system.
+
+	$ git clone git://keithp.com/git/snek
+	$ cd snek
+	$ make install
+
+Snek is a subset of Python3 suitable for small systems.
+
+* 32-bit float numbers
+* Lists, tuples and strings
+* Named parameters

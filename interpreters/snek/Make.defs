@@ -1,0 +1,3 @@
+ifeq ($(CONFIG_INTERPRETERS_SNEK),y)
+CONFIGURED_APPS += interpreters/snek
+endif
