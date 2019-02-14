@@ -44,7 +44,9 @@ _snek_getc(void)
 {
 	if (line[cur] == '\0') {
 		char *prompt;
-		prompt = ">>> ";
+		prompt = "> ";
+		if (snek_parse_middle)
+			prompt = "+ ";
 		printf(prompt); fflush(stdout);
 		readline_prompt(prompt);
 		if (std_readline(line, sizeof(line)) == EOF)
@@ -60,7 +62,9 @@ int main(int argc, FAR char *argv[])
 int snek_main(int argc, char *argv[])
 #endif
 {
-	snek_print_vals = true;
+	(void) argc;
+	(void) argv;
+	snek_interactive = true;
 	fprintf(stdout, "Welcome to Snek\n");
 	snek_parse();
 	return 0;
